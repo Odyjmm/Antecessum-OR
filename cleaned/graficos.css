@@ -1,0 +1,262 @@
+body {
+    background: #0f4b12;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.dashboard {
+    width: 100%;
+    height: 100%;
+    background: #edf0ed;
+    border-radius: 35px;
+    padding: 20px;
+    position: relative;
+    overflow: visible;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.back {
+    font-size: 45px;
+    color: #1b5f16;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.center-title {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.main-btn {
+    background: #1b5f16;
+    color: white;
+    border-radius: 18px;
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.subtitle {
+    margin-top: 6px;
+    color: #1b5f16;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.right-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.right-btn {
+    background: #1b5f16;
+    color: white;
+    border-radius: 16px;
+    padding: 10px 18px;
+    text-align: center;
+    font-weight: bold;
+    min-width: 120px;
+}
+
+.card-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.card {
+    background: white;
+    border: 2px solid #2b6a28;
+    border-radius: 20px;
+    padding: 15px;
+    position: relative;
+    overflow: hidden;
+    flex: 1;
+}
+
+.card-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #1b5f16;
+    color: white;
+    padding: 10px 16px;
+    border-bottom-right-radius: 18px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.metric {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.metric h1 {
+    font-size: 52px;
+    color: white;
+    -webkit-text-stroke: 2px #1b5f16;
+}
+
+.metric p {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.small-graph {
+    margin-top: 20px;
+    height: 60px;
+    position: relative;
+}
+
+.small-graph svg {
+    width: 100%;
+    height: 100%;
+}
+
+.large-card {
+    background: white;
+    border: 2px solid #2b6a28;
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.large-card .card-title {
+    font-size: 15px;
+}
+
+.delay {
+    margin-top: 60px;
+    text-align: left;
+}
+
+.delay h1 {
+    font-size: 60px;
+    color: white;
+    -webkit-text-stroke: 2px #1b5f16;
+}
+
+.delay p {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.line-chart {
+    margin-top: 20px;
+}
+
+.line-chart svg {
+    width: 100%;
+    height: 100px;
+}
+
+.chart-container {
+    margin-bottom: 15px;
+}
+
+.chart-title {
+    background: #1b5f16;
+    color: white;
+    display: inline-block;
+    padding: 10px 16px;
+    border-radius: 15px 15px 0 0;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.big-chart {
+    background: #556b8a;
+    height: 240px;
+    border-radius: 0 0 15px 15px;
+    padding: 20px;
+    position: relative;
+}
+
+.big-chart svg {
+    width: 100%;
+    height: 100%;
+}
+
+.bottom-card {
+    background: white;
+    border: 2px solid #2b6a28;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.bottom-card .card-title {
+    position: relative;
+    display: inline-block;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.bottom-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.donut {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background:
+        conic-gradient(#1b5f16 0% 40%,
+            #83d992 40% 60%,
+            #000000 60% 85%,
+            #2aff00 85% 100%);
+    position: relative;
+}
+
+.donut::after {
+    content: '';
+    width: 70px;
+    height: 70px;
+    background: #edf0ed;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.legend {
+    flex: 1;
+}
+
+.legend-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+    font-weight: bold;
+    color: #294d28;
+}
+
+.legend-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
