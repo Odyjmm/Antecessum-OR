@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Antecessum OR - Login</title>
+
+  <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+  <div class="screen">
+
+    <!-- BOTÃO VOLTAR -->
+    <div class="back">
+      <span></span>
+    </div>
+
+    <!-- CONTEÚDO -->
+    <div class="content">
+
+      <!-- LOGO -->
+      <div class="logo">
+        <div class="logo-inner"></div>
+      </div>
+
+      <!-- FORMULÁRIO -->
+      <div class="form">
+
+        <!-- USUÁRIO -->
+        <div class="label">Usuário</div>
+
+        <div class="input-box">
+          <div class="icon">👤</div>
+
+          <input
+            type="text"
+            placeholder="Digite seu usuário"
+          >
+        </div>
+
+        <!-- SENHA -->
+        <div class="label">Senha</div>
+
+        <div class="input-box">
+
+          <div class="icon">🔒</div>
+
+          <input
+            type="password"
+            placeholder="Digite sua senha"
+            id="password"
+          >
+
+          <div class="eye" onclick="togglePassword()">
+            👁️
+          </div>
+
+        </div>
+
+        <!-- ESQUECEU -->
+        <div class="forgot">
+          Esqueceu sua senha?
+        </div>
+
+        <!-- LOGIN -->
+        <a href="salas.html" class="login-btn">
+          Entrar
+        </a>
+
+        <!-- DIVISOR -->
+        <div class="divider">
+
+          <div class="divider-line"></div>
+
+          <span>Ou</span>
+
+          <div class="divider-line"></div>
+
+        </div>
+
+        <!-- BIOMETRIA -->
+        <button class="bio-btn">
+
+          <div class="finger">🖐️</div>
+
+          Entrar com biometria
+
+        </button>
+
+      </div>
+
+      <!-- RODAPÉ -->
+      <div class="footer">
+        Antecessum OR
+      </div>
+
+    </div>
+
+  </div>
+
+<script src="scripts.js"></script>
+
+</body>
+</html>
