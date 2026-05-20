@@ -1,43 +1,9 @@
-body {
-    background: #0b4f0b;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-}
-
-.panel {
-    position: absolute;
-
-    top: 8px;
-    left: 8px;
-    right: 8px;
-    bottom: 8px;
-
-    background: #f4f4f4;
-
-    border-radius: 35px;
-
-    padding: 22px 18px 140px 18px;
-
-    overflow-y: auto;
-}
-
 .top-header {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
 
     margin-bottom: 30px;
-}
-
-.back-btn {
-    font-size: 60px;
-    color: #215f21;
-    font-weight: 900;
-    cursor: pointer;
-    margin-top: 18px;
-    padding-left: 20px;
 }
 
 .cancel-btn {

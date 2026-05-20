@@ -13,78 +13,80 @@
 </head>
 
 <body>
+    <div class="screen">
+        <div class="panel">
 
-    <div class="dashboard">
+            <div class="top">
 
-        <div class="top">
+                <a href="../templates/salas.html" class="back">
+                    ❮
+                </a>
 
-            <div class="back">❮</div>
-
-            <div class="center-title">
-                <div class="main-btn">Antecessum OR</div>
-                <div class="subtitle">Centro Cirúrgico</div>
-            </div>
-
-            <div class="right-buttons">
-                <div class="right-btn">Exportar</div>
-                <div class="right-btn">06/05/2026 📅</div>
-            </div>
-
-        </div>
-
-        <div class="card-row">
-
-            <div class="card">
-
-                <div class="card-title">Taxa de Cancelamento</div>
-
-                <div class="metric">
-                    <h1>12%</h1>
-                    <p>6 de 50 Cirurgias</p>
+                <div class="center-title">
+                    <div class="main-btn">Antecessum OR</div>
+                    <div class="subtitle">Centro Cirúrgico</div>
                 </div>
 
-                <div class="small-graph">
-                    <svg viewBox="0 0 300 80">
-                        <polyline fill="none" stroke="#1b5f16" stroke-width="4"
-                            points="10,60 90,30 140,55 220,10 290,40" />
-                    </svg>
+                <div class="right-buttons">
+                    <div class="right-btn">Exportar</div>
+                    <div class="right-btn">06/05/2026 📅</div>
                 </div>
 
             </div>
 
-            <div class="card">
+            <div class="card-row">
 
-                <div class="card-title">Cirurgias Realizadas</div>
+                <div class="card">
 
-                <div class="metric">
-                    <h1>50</h1>
-                    <p>Total do dia</p>
+                    <div class="card-title">Taxa de Cancelamento</div>
+
+                    <div class="metric">
+                        <h1>12%</h1>
+                        <p>6 de 50 Cirurgias</p>
+                    </div>
+
+                    <div class="small-graph">
+                        <svg viewBox="0 0 300 80">
+                            <polyline fill="none" stroke="#1b5f16" stroke-width="4"
+                                points="10,60 90,30 140,55 220,10 290,40" />
+                        </svg>
+                    </div>
+
                 </div>
 
-                <div class="small-graph">
-                    <svg viewBox="0 0 300 80">
-                        <polyline fill="none" stroke="#1b5f16" stroke-width="4"
-                            points="10,50 60,30 100,48 150,15 200,28 250,5 295,20" />
-                    </svg>
+                <div class="card">
+
+                    <div class="card-title">Cirurgias Realizadas</div>
+
+                    <div class="metric">
+                        <h1>50</h1>
+                        <p>Total do dia</p>
+                    </div>
+
+                    <div class="small-graph">
+                        <svg viewBox="0 0 300 80">
+                            <polyline fill="none" stroke="#1b5f16" stroke-width="4"
+                                points="10,50 60,30 100,48 150,15 200,28 250,5 295,20" />
+                        </svg>
+                    </div>
+
                 </div>
 
             </div>
 
-        </div>
+            <div class="large-card">
 
-        <div class="large-card">
+                <div class="card-title">Tempo Médio de atraso</div>
 
-            <div class="card-title">Tempo Médio de atraso</div>
+                <div class="delay">
+                    <h1>28 Min</h1>
+                    <p>Tempo médio de atraso</p>
+                </div>
 
-            <div class="delay">
-                <h1>28 Min</h1>
-                <p>Tempo médio de atraso</p>
-            </div>
+                <div class="line-chart">
+                    <svg viewBox="0 0 500 120">
 
-            <div class="line-chart">
-                <svg viewBox="0 0 500 120">
-
-                    <polyline fill="none" stroke="#1b5f16" stroke-width="4" points="
+                        <polyline fill="none" stroke="#1b5f16" stroke-width="4" points="
                     10,90
                     40,60
                     70,95
@@ -103,88 +105,89 @@
                     460,45
                     490,20" />
 
-                </svg>
-            </div>
-
-        </div>
-
-        <div class="chart-container">
-
-            <div class="chart-title">Cancelamentos por dia</div>
-
-            <div class="big-chart">
-
-                <svg viewBox="0 0 500 220">
-
-                    <polyline fill="none" stroke="white" stroke-width="4"
-                        points="40,150 150,80 260,20 360,170 460,120" />
-
-                    <circle cx="40" cy="150" r="7" fill="white" />
-                    <circle cx="150" cy="80" r="7" fill="white" />
-                    <circle cx="260" cy="20" r="7" fill="white" />
-                    <circle cx="360" cy="170" r="7" fill="white" />
-                    <circle cx="460" cy="120" r="7" fill="white" />
-
-                </svg>
+                    </svg>
+                </div>
 
             </div>
 
-        </div>
+            <div class="chart-container">
 
-        <div class="bottom-card">
+                <div class="chart-title">Cancelamentos por dia</div>
 
-            <div class="card-title">Motivos mais frequentes</div>
+                <div class="big-chart">
 
-            <div class="bottom-content">
+                    <svg viewBox="0 0 500 220">
 
-                <div class="donut"></div>
+                        <polyline fill="none" stroke="white" stroke-width="4"
+                            points="40,150 150,80 260,20 360,170 460,120" />
 
-                <div class="legend">
+                        <circle cx="40" cy="150" r="7" fill="white" />
+                        <circle cx="150" cy="80" r="7" fill="white" />
+                        <circle cx="260" cy="20" r="7" fill="white" />
+                        <circle cx="360" cy="170" r="7" fill="white" />
+                        <circle cx="460" cy="120" r="7" fill="white" />
 
-                    <div class="legend-item">
-                        <div class="legend-left">
-                            <div class="dot" style="background:#1b5f16;"></div>
-                            Ausência do Paciente
-                        </div>
-                        <span>40%</span>
-                    </div>
-
-                    <div class="legend-item">
-                        <div class="legend-left">
-                            <div class="dot" style="background:#83d992;"></div>
-                            Problemática Clínico
-                        </div>
-                        <span>20%</span>
-                    </div>
-
-                    <div class="legend-item">
-                        <div class="legend-left">
-                            <div class="dot" style="background:black;"></div>
-                            Falta de Material
-                        </div>
-                        <span>25%</span>
-                    </div>
-
-                    <div class="legend-item">
-                        <div class="legend-left">
-                            <div class="dot" style="background:#2aff00;"></div>
-                            Problema da Equipe
-                        </div>
-                        <span>15%</span>
-                    </div>
-
-                    <div class="legend-item">
-                        <div class="legend-left">
-                            <div class="dot" style="background:#cfcfcf;"></div>
-                            Outros
-                        </div>
-                        <span>0%</span>
-                    </div>
+                    </svg>
 
                 </div>
 
             </div>
 
+            <div class="bottom-card">
+
+                <div class="card-title">Motivos mais frequentes</div>
+
+                <div class="bottom-content">
+
+                    <div class="donut"></div>
+
+                    <div class="legend">
+
+                        <div class="legend-item">
+                            <div class="legend-left">
+                                <div class="dot" style="background:#1b5f16;"></div>
+                                Ausência do Paciente
+                            </div>
+                            <span>40%</span>
+                        </div>
+
+                        <div class="legend-item">
+                            <div class="legend-left">
+                                <div class="dot" style="background:#83d992;"></div>
+                                Problemática Clínico
+                            </div>
+                            <span>20%</span>
+                        </div>
+
+                        <div class="legend-item">
+                            <div class="legend-left">
+                                <div class="dot" style="background:black;"></div>
+                                Falta de Material
+                            </div>
+                            <span>25%</span>
+                        </div>
+
+                        <div class="legend-item">
+                            <div class="legend-left">
+                                <div class="dot" style="background:#2aff00;"></div>
+                                Problema da Equipe
+                            </div>
+                            <span>15%</span>
+                        </div>
+
+                        <div class="legend-item">
+                            <div class="legend-left">
+                                <div class="dot" style="background:#cfcfcf;"></div>
+                                Outros
+                            </div>
+                            <span>0%</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
         </div>
     </div>
 

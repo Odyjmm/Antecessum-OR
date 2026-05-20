@@ -1,24 +1,8 @@
-body {
-    background: #0f4f0f;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    min-height: 100vh;
-    padding: 10px;
-}
-
 .header {
     display: flex;
     align-items: center;
     padding: 25px 20px;
     gap: 15px;
-}
-
-.back-icon {
-    font-size: 45px;
-    color: #2d5d2d;
-    font-weight: bold;
-    cursor: pointer;
 }
 
 .title-box {
@@ -180,15 +164,6 @@ body {
     background: #165f12;
     color: white;
     font-size: 26px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.back-text {
-    text-align: center;
-    margin-top: 55px;
-    color: #1d4f1d;
-    font-size: 30px;
     font-weight: bold;
     cursor: pointer;
 }
