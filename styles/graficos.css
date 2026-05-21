@@ -20,13 +20,6 @@
     font-weight: bold;
 }
 
-.subtitle {
-    margin-top: 6px;
-    color: #1b5f16;
-    font-size: 14px;
-    font-weight: bold;
-}
-
 .right-buttons {
     display: flex;
     flex-direction: column;

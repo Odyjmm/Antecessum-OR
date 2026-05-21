@@ -4,6 +4,11 @@
     box-sizing:border-box;
 }
 
+:root {
+    --clock-color: #336633;
+    --subtitle-color: #1d5f1d;
+}
+
 body{
     min-height:100vh;
 

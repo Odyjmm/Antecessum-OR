@@ -126,47 +126,6 @@
     font-weight: 900;
 }
 
-.clock {
-    width: 90px;
-    height: 90px;
-
-    border-radius: 50%;
-    border: 10px solid #2f772f;
-
-    position: relative;
-}
-
-.clock::before {
-    content: "";
-    position: absolute;
-
-    width: 6px;
-    height: 28px;
-
-    background: #2f772f;
-
-    top: 18px;
-    left: 50%;
-
-    transform: translateX(-50%);
-}
-
-.clock::after {
-    content: "";
-    position: absolute;
-
-    width: 24px;
-    height: 6px;
-
-    background: #2f772f;
-
-    top: 48px;
-    left: 44px;
-
-    transform: rotate(35deg);
-    transform-origin: left center;
-}
-
 .room-info h2 {
     font-size: 34px;
     color: black;
