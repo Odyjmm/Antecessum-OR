@@ -4,8 +4,6 @@
     flex-direction: column;
 }
 
-
-
 .input-box {
     width: 100%;
     height: 95px;
@@ -28,7 +26,7 @@
     font-weight: 600;
 }
 
-.icon {
+.input-icon {
     font-size: 34px;
     color: #bdbdbd;
 }

@@ -1,22 +1,3 @@
-.top-bar {
-    width: 100%;
-    height: 14px;
-    background: #165f12;
-}
-
-.title-button {
-    flex: 1;
-    margin: 0 15px;
-    background: #165f12;
-    color: white;
-    border: none;
-    border-radius: 20px;
-    height: 75px;
-    font-size: 22px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
 .select-box {
     width: 100%;
     background: #c9dbc5;
@@ -64,18 +45,4 @@
     color: #8d8d8d;
     font-size: 16px;
     font-weight: bold;
-}
-
-.confirm-btn {
-    width: 85%;
-    height: 85px;
-    background: #165f12;
-    color: white;
-    border: none;
-    border-radius: 20px;
-    display: block;
-    margin: 90px auto 35px;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
 }

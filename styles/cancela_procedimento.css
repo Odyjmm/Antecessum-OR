@@ -1,16 +1,3 @@
-.title-box {
-    flex: 1;
-    background: #165f12;
-    color: white;
-    border-radius: 20px;
-    height: 78px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 24px;
-    font-weight: bold;
-}
-
 .warning-box {
     width: 100%;
     background: #c7d9c1;
@@ -94,18 +81,4 @@
     font-size: 22px;
     font-weight: bold;
     color: #3e5b3e;
-}
-
-.confirm-btn {
-    width: 88%;
-    height: 82px;
-    margin: 0 auto;
-    display: block;
-    border: none;
-    border-radius: 22px;
-    background: #165f12;
-    color: white;
-    font-size: 26px;
-    font-weight: bold;
-    cursor: pointer;
 }

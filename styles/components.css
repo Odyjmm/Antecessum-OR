@@ -132,6 +132,20 @@
     text-decoration: none;
 }
 
+.confirm-btn {
+    width: 85%;
+    height: 85px;
+    background: #165f12;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    display: block;
+    margin: 90px auto 35px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
 /* ESTRUTURAS */
 
 .header {
@@ -160,6 +174,21 @@
 
     font-size: 26px;
     font-weight: 900;
+}
+
+.title-box {
+    flex: 1;
+    margin: 0 15px;
+    background: #165f12;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    height: 75px;
+    font-size: 22px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .content {
@@ -241,6 +270,14 @@
 .textarea-box textarea::placeholder {
     color: #bdbdbd;
     font-weight: bold;
+}
+
+.icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    color: #215f21;
 }
 
 /* TEXTOS */

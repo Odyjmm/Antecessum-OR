@@ -93,16 +93,6 @@
     align-items: flex-start;
 }
 
-.icon {
-    width: 70px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    font-size: 48px;
-    color: #215f21;
-}
-
 .info-content h3 {
     font-size: 28px;
     margin-bottom: 6px;
@@ -209,25 +199,6 @@
     font-weight: 800;
 
     margin-bottom: 28px;
-}
-
-.timeline-circle {
-    width: 34px;
-    height: 34px;
-
-    border-radius: 50%;
-
-    border: 2px solid #bbb;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    font-size: 18px;
-    font-weight: 900;
-
-    cursor: pointer;
-    transition: 0.2s;
 }
 
 .timeline-item {
