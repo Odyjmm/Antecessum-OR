@@ -67,11 +67,6 @@ Antecessum-OR/
     └── background.avif
 ```
 
-> **Atenção:** o repositório ainda contém `templates/detalhes_cirurgia.html`
-> e `styles/detalhes_cirurgia.css` — versões antigas de antes da reorganização
-> por sala, sem nenhuma página apontando para elas. Não fazem mais parte do
-> fluxo do app e podem ser apagadas com segurança.
-
 ---
 
 ## Sistema de design
