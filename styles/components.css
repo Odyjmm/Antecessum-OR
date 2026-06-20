@@ -1,401 +1,509 @@
-/* NAVBAR */
+/* ==========================================================================
+   COMPONENTS — elementos reutilizados em mais de uma página.
+   Tudo em rem: como o html tem font-size fluido (ver global.css), estes
+   componentes escalam proporcionalmente do celular até a TV sem precisar
+   de uma regra @media para cada um. Breakpoints abaixo só existem onde a
+   ESTRUTURA do layout muda (largura do painel, quebras de linha), não
+   para reescalar tamanho.
+   ========================================================================== */
 
+/* --------------------------------------------------------------------------
+   PALCO E PAINEL
+   .screen é o "palco" (fundo com imagem). .panel é o cartão de conteúdo.
+   -------------------------------------------------------------------------- */
+.screen {
+  width: 100%;
+  min-height: 100vh;
+
+  background:
+    linear-gradient(rgba(0, 60, 0, 0.70), rgba(0, 60, 0, 0.82)),
+    url("../uploads/background.avif");
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.panel {
+  width: 92%;
+  align-items: center;
+
+  background: var(--color-surface-soft);
+  border-radius: var(--radius-xl);
+
+  padding: 1.375rem 1.125rem 8.75rem;
+
+  overflow-y: auto;
+  box-shadow: var(--shadow-panel);
+}
+
+@media (min-width: 600px) {
+  .panel { width: 85%; padding: 1.75rem 1.5rem 8.75rem; }
+}
+
+@media (min-width: 1024px) {
+  .panel {
+    width: 70%;
+    max-width: var(--content-max-width);
+    padding: 2.25rem 2.5rem 7.5rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .panel { width: 58%; }
+}
+
+/* --------------------------------------------------------------------------
+   NAVBAR INFERIOR
+   -------------------------------------------------------------------------- */
 .bottom-nav {
-    position: fixed;
+  position: fixed;
+  bottom: 0.625rem;
 
-    bottom: 10px;
+  width: 85%;
+  max-width: 26rem;
+  height: 5.625rem;
 
-    width: 65%;
-    height: 95px;
+  background: var(--color-border-soft);
+  border-radius: var(--radius-lg);
 
-    background: #c0c0c0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 
-    border-radius: 25px;
+  box-shadow: 0 -0.25rem 1.25rem rgba(0, 0, 0, 0.08);
+}
 
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+@media (min-width: 600px) {
+  .bottom-nav { width: 60%; max-width: 30rem; }
+}
 
-    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.08);
+@media (min-width: 1024px) {
+  .bottom-nav { max-width: 34rem; height: 6.25rem; }
 }
 
 .nav-icon {
-    font-size: 60px;
-    color: #888;
-    cursor: pointer;
-    transition: 0.3s;
-    padding-left: 80px;
-    padding-right: 80px;
-    text-decoration: none;
+  font-size: 3rem;
+  color: var(--color-icon-muted);
+  cursor: pointer;
+  transition: 0.3s;
+  text-decoration: none;
+  line-height: 1;
 }
 
 .nav-icon:hover {
-    transform: scale(1.1);
-    color: #145b14;
+  transform: scale(1.1);
+  color: var(--color-primary);
 }
 
-/* TELA */
-
-.screen{
-    width:100%;
-    min-height:100vh;
-
-    background:
-        linear-gradient(
-            rgba(0, 60, 0, 0.70),
-            rgba(0, 60, 0, 0.82)
-        ),
-        url("../uploads/background.avif");
-
-    background-repeat:no-repeat;
-    background-position:center;
-    background-size:cover;
-
-    display:flex;
-    align-items: center;
-    justify-content:center;
-}
-
-.panel{
-    width: 65%;
-    align-items: center;
-
-    top:20px;
-    left:20px;
-    right:20px;
-    bottom:20px;
-
-    background:#f4f4f4;
-
-    border-radius:35px;
-
-    padding:22px 18px 140px 18px;
-
-    overflow-y:auto;
-
-    box-shadow:0 10px 30px rgba(0,0,0,0.15);
-}
-
-/* LOGO */
-
+/* --------------------------------------------------------------------------
+   LOGO
+   -------------------------------------------------------------------------- */
 .logo {
-    width: 120px;
-    height: 120px;
-    border-radius: 30px;
-    background: #40c4ff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  width: 7.5rem;
+  height: 7.5rem;
+  border-radius: var(--radius-xl);
+  background: var(--color-accent);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0.625rem 1.875rem rgba(0, 0, 0, 0.3);
+  flex-shrink: 0;
 }
 
 .logo-inner {
-    position: relative;
-    width: 70px;
-    height: 70px;
-    border: 5px solid white;
-    border-radius: 10px;
+  position: relative;
+  width: 4.375rem;
+  height: 4.375rem;
+  border: 0.3125rem solid var(--color-surface);
+  border-radius: var(--radius-sm);
 }
 
 .logo-inner::before,
 .logo-inner::after {
-    content: "";
-    position: absolute;
-    background: white;
+  content: "";
+  position: absolute;
+  background: var(--color-surface);
+  width: 2.5rem;
+  height: 0.3125rem;
+  left: 0.625rem;
 }
 
-.logo-inner::before {
-    width: 40px;
-    height: 5px;
-    top: 18px;
-    left: 10px;
-}
+.logo-inner::before { top: 1.125rem; }
+.logo-inner::after  { bottom: 1.125rem; }
 
-.logo-inner::after {
-    width: 40px;
-    height: 5px;
-    bottom: 18px;
-    left: 10px;
-}
-
-/* BOTÕES*/
-
+/* --------------------------------------------------------------------------
+   BOTÕES
+   -------------------------------------------------------------------------- */
 .back {
-    font-size: 60px;
-    color: #1a5d18;
-    font-weight: 900;
-    cursor: pointer;
-    margin-top: 0;
-    text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 3.75rem;
+  color: var(--color-primary);
+  font-weight: 900;
+  cursor: pointer;
+  text-decoration: none;
+  line-height: 1;
+  flex-shrink: 0;
 }
 
 .confirm-btn {
-    width: 85%;
-    height: 85px;
-    background: #165f12;
-    color: white;
-    border: none;
-    border-radius: 20px;
-    display: block;
-    margin: 90px auto 35px;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
+  width: 100%;
+  max-width: 28rem;
+  height: 5.3125rem;
+  background: var(--color-primary);
+  color: var(--color-surface);
+  border: none;
+  border-radius: var(--radius-md);
+  display: block;
+  margin: 5.625rem auto 2.1875rem;
+  font-size: 1.75rem;
+  font-weight: bold;
+  cursor: pointer;
 }
 
-/* ESTRUTURAS */
-
+/* --------------------------------------------------------------------------
+   ESTRUTURAS — cabeçalhos e títulos de seção
+   -------------------------------------------------------------------------- */
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    margin-bottom: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.875rem;
+  gap: 1rem;
 }
 
 .section-title {
-    width: 88%;
-    height: 62px;
+  width: 100%;
+  max-width: 32rem;
+  height: 3.875rem;
 
-    margin: 0 auto 25px auto;
+  margin: 0 auto 1.5625rem;
 
-    background: #175f14;
+  background: var(--color-primary);
+  border-radius: var(--radius-md);
+  color: var(--color-surface);
 
-    border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    color: white;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    font-size: 26px;
-    font-weight: 900;
+  font-size: 1.625rem;
+  font-weight: 900;
+  text-align: center;
+  padding: 0 1rem;
 }
 
 .title-box {
-    flex: 1;
-    margin: 0 15px;
-    background: #165f12;
-    color: white;
-    border: none;
-    border-radius: 20px;
-    height: 75px;
-    font-size: 22px;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  flex: 1;
+  margin: 0 0.9375rem;
+  background: var(--color-primary);
+  color: var(--color-surface);
+  border: none;
+  border-radius: var(--radius-md);
+  height: 4.6875rem;
+  font-size: 1.375rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
+/* --------------------------------------------------------------------------
+   CONTAINERS DE CONTEÚDO
+   .content--centered: formulários (login). Largura limitada mesmo em TV —
+   um campo de usuário/senha não deve esticar até 1920px.
+   .content--fullscreen: tela cheia centralizada (landing).
+   -------------------------------------------------------------------------- */
 .content {
-    padding: 10px 22px;
+  padding: 0.625rem 1.375rem;
 }
 
 .content--centered {
-    position: relative;
-    z-index: 5;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  position: relative;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-    padding-top: 90px;
-    width: 65%;
+  padding-top: 5.625rem;
+  width: 90%;
+  max-width: var(--form-max-width);
 }
 
 .content--fullscreen {
-    position: relative;
-    z-index: 5;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  position: relative;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
-    height: 100vh;
-    padding: 260px 20px 60px;
+  width: 90%;
+  max-width: 40rem;
+  height: 100vh;
+  padding: 2rem 1.25rem;
+  text-align: center;
 }
 
+/* --------------------------------------------------------------------------
+   FORMULÁRIO — rótulos, contador, caixa de texto
+   -------------------------------------------------------------------------- */
 .label {
-    color: white;
-    font-size: 28px;
-    margin-bottom: 12px;
-    margin-left: 6px;
+  color: var(--color-surface);
+  font-size: 1.75rem;
+  margin-bottom: 0.75rem;
+  margin-left: 0.375rem;
 }
 
 .label--boxed {
-    display: inline-block;
-    background: #165f12;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 30px;
-    font-size: 18px;
-    font-weight: bold;
-    margin-top: 15px;
-    margin-bottom: 12px;
+  display: inline-block;
+  background: var(--color-primary);
+  color: var(--color-surface);
+  padding: 0.625rem 1.25rem;
+  border-radius: var(--radius-pill);
+  font-size: 1.125rem;
+  font-weight: bold;
+  margin-top: 0.9375rem;
+  margin-bottom: 0.75rem;
 }
 
 .counter {
-    position: absolute;
-    right: 20px;
-    bottom: 15px;
-    color: #c0c0c0;
-    font-size: 14px;
-    font-weight: bold;
+  position: absolute;
+  right: 1.25rem;
+  bottom: 0.9375rem;
+  color: var(--color-border-soft);
+  font-size: 0.875rem;
+  font-weight: bold;
 }
 
 .textarea-box {
-    width: 100%;
-    height: 320px;
-    border: 4px solid #165f12;
-    border-radius: 25px;
-    background: #fafafa;
-    padding: 25px;
-    position: relative;
-    margin-bottom: 40px;
+  width: 100%;
+  height: 16rem;
+  border: 0.25rem solid var(--color-primary);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface-faint);
+  padding: 1.5625rem;
+  position: relative;
+  margin-bottom: 2.5rem;
 }
 
 .textarea-box textarea {
-    width: 100%;
-    height: 100%;
-    border: none;
-    outline: none;
-    resize: none;
-    background: transparent;
-    font-size: 18px;
-    color: #333;
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  resize: none;
+  background: transparent;
+  font-size: 1.125rem;
+  color: var(--color-ink);
+  font-family: inherit;
 }
 
 .textarea-box textarea::placeholder {
-    color: #bdbdbd;
-    font-weight: bold;
+  color: var(--color-border-soft);
+  font-weight: bold;
 }
 
+/* --------------------------------------------------------------------------
+   ÍCONES
+   Container neutro usado para qualquer ícone/emoji que precise ficar
+   centralizado e com tamanho consistente (tesoura, relógio, triângulo,
+   caixa de material, etc). Modificadores de tamanho seguem o mesmo
+   padrão de avatar/clock.
+   -------------------------------------------------------------------------- */
 .icon-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
-    color: #215f21;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  color: var(--color-primary-light);
+  line-height: 1;
 }
 
-/* TEXTOS */
+.icon-container--sm { width: 3rem;  height: 3rem;  font-size: 1.875rem; }
+.icon-container--md { width: 4.375rem; height: 4.375rem; font-size: 3rem; }
+.icon-container--lg { width: 5.625rem; height: 5.625rem; font-size: 4.375rem; }
+
+/* --------------------------------------------------------------------------
+   TEXTOS
+   -------------------------------------------------------------------------- */
 .subtitle {
-    color: var(--subtitle-color);
-    font-size: 24px;
-    font-weight: 800;
+  color: var(--subtitle-color, var(--color-primary-light));
+  font-size: 1.5rem;
+  font-weight: 800;
 }
 
 .subtitle--graph {
-    margin-top: 6px;
-    color: var(--subtitle-color);
-    font-size: 14px;
-    font-weight: bold;
+  margin-top: 0.375rem;
+  color: var(--color-primary-light);
+  font-size: 0.875rem;
+  font-weight: bold;
 }
 
 .subtitle--landing {
-    margin-top: 20px;
-    color: white;
-    text-align: center;
-    line-height: 1.4;
-    font-weight: 600;
+  margin-top: 1.25rem;
+  color: var(--color-surface);
+  text-align: center;
+  line-height: 1.4;
+  font-weight: 600;
+  font-size: 1.25rem;
 }
 
-/* AVATAR */
+/* --------------------------------------------------------------------------
+   BADGE
+   Pílula de destaque curta. Usada em alertas.html e nas páginas de
+   detalhes (status de atraso, etc).
+   -------------------------------------------------------------------------- */
+.badge {
+  background: var(--color-primary);
+  color: var(--color-surface);
+  width: fit-content;
+  max-width: 100%;
+  padding: 0.625rem 1.125rem;
+  border-radius: var(--radius-md);
+  font-size: 1.125rem;
+  font-weight: 800;
+}
 
+/* --------------------------------------------------------------------------
+   WARNING BOX
+   Caixa de aviso com ícone circular + texto. Usada em
+   cancela_procedimento.html e nas páginas de detalhes que mostram um
+   estado que precisa de atenção (cancelado, atrasado).
+   -------------------------------------------------------------------------- */
+.warning-box {
+  width: 100%;
+  background: var(--color-tint);
+  border-radius: var(--radius-xl);
+  padding: 1.875rem;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 3.125rem;
+}
+
+.warning-icon {
+  width: 5rem;
+  height: 5rem;
+  border: 0.375rem solid var(--color-primary);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-primary);
+  font-size: 3.125rem;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.warning-text {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--color-ink);
+  line-height: 1.3;
+}
+
+/* --------------------------------------------------------------------------
+   AVATAR
+   Base compartilhada + modificadores de tamanho (sm/md/lg).
+   -------------------------------------------------------------------------- */
 .avatar {
-    background: black;
-    border-radius: 50%;
-    position: relative;
-    flex-shrink: 0;
+  background: var(--color-ink);
+  border-radius: 50%;
+  position: relative;
+  flex-shrink: 0;
 }
 
 .avatar::before {
-    content: "";
-    position: absolute;
-    background: #335f2d;
-    border-radius: 50%;
-    left: 50%;
-    transform: translateX(-50%);
+  content: "";
+  position: absolute;
+  background: var(--color-text-muted);
+  border-radius: 50%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .avatar::after {
-    content: "";
-    position: absolute;
-    background: #335f2d;
-    border-radius: 50px 50px 0 0;
-    left: 50%;
-    transform: translateX(-50%);
+  content: "";
+  position: absolute;
+  background: var(--color-text-muted);
+  border-radius: 3.125rem 3.125rem 0 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-.avatar--sm {
-    width: 60px;
-    height: 60px;
-}
-.avatar--sm::before { width: 20px; height: 20px; top: 10px; }
-.avatar--sm::after  { width: 40px; height: 24px; bottom: 10px; }
+.avatar--sm { width: 3.75rem; height: 3.75rem; }
+.avatar--sm::before { width: 1.25rem; height: 1.25rem; top: 0.625rem; }
+.avatar--sm::after  { width: 2.5rem;  height: 1.5rem;  bottom: 0.625rem; }
 
-.avatar--md {
-    width: 80px;
-    height: 80px;
-}
-.avatar--md::before { width: 26px; height: 26px; top: 14px; }
-.avatar--md::after  { width: 48px; height: 28px; bottom: 12px; }
+.avatar--md { width: 5rem; height: 5rem; }
+.avatar--md::before { width: 1.625rem; height: 1.625rem; top: 0.875rem; }
+.avatar--md::after  { width: 3rem;     height: 1.75rem;  bottom: 0.75rem; }
 
-.avatar--lg {
-    width: 110px;
-    height: 110px;
-}
-.avatar--lg::before { width: 38px; height: 38px; top: 18px; }
-.avatar--lg::after  { width: 70px; height: 40px; bottom: 18px; }
+.avatar--lg { width: 6.875rem; height: 6.875rem; }
+.avatar--lg::before { width: 2.375rem; height: 2.375rem; top: 1.125rem; }
+.avatar--lg::after  { width: 4.375rem; height: 2.5rem;   bottom: 1.125rem; }
 
-/* CLOCK */
-
+/* --------------------------------------------------------------------------
+   CLOCK
+   Base compartilhada + modificadores de tamanho (sm/md/lg). Ponteiros
+   nascem do centro via top/left 50% + margin negativo — evita recalcular
+   posição absoluta a cada tamanho novo (ver explicação completa no
+   histórico de decisões do projeto).
+   -------------------------------------------------------------------------- */
 .clock {
-    border-radius: 50%;
-    position: relative;
+  border-radius: 50%;
+  position: relative;
 }
 
 .clock::before {
-    content: "";
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translateX(-50%);
-    transform-origin: center bottom;
-    background: var(--clock-color);
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background: var(--clock-color, var(--color-primary-light));
 }
 
 .clock::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: rotate(35deg);
-    transform-origin: left center;
-    background: var(--clock-color);
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: rotate(35deg);
+  transform-origin: left center;
+  background: var(--clock-color, var(--color-primary-light));
 }
 
 .clock--sm {
-    width: 48px;
-    height: 48px;
-    border: 5px solid var(--clock-color);
+  width: 3rem;
+  height: 3rem;
+  border: 0.3125rem solid var(--clock-color, var(--color-primary-light));
 }
-.clock--sm::before {width: 4px; height: 15px; margin-left: -2px; margin-top: -15px;}
-.clock--sm::after {width: 14px; height: 4px; margin-top: -2px;}
+.clock--sm::before { width: 0.25rem; height: 0.9375rem; margin-left: -0.125rem; margin-top: -0.9375rem; }
+.clock--sm::after  { width: 0.875rem; height: 0.25rem;  margin-top: -0.125rem;  margin-left: -0.4375rem; }
 
 .clock--md {
-    width: 70px;
-    height: 70px;
-    border: 8px solid var(--clock-color);
+  width: 4.375rem;
+  height: 4.375rem;
+  border: 0.5rem solid var(--clock-color, var(--color-primary-light));
 }
-.clock--md::before {width: 5px; height: 20px; margin-left: -2.5px; margin-top: -20px;}
-.clock--md::after {width: 18px; height: 5px; margin-top: -2.5px;}
+.clock--md::before { width: 0.3125rem; height: 1.25rem; margin-left: -0.15625rem; margin-top: -1.25rem; }
+.clock--md::after  { width: 1.125rem;  height: 0.3125rem; margin-top: -0.15625rem; margin-left: -0.5625rem; }
 
 .clock--lg {
-    width: 90px;
-    height: 90px;
-    border: 10px solid var(--clock-color);
+  width: 5.625rem;
+  height: 5.625rem;
+  border: 0.625rem solid var(--clock-color, var(--color-primary-light));
 }
-.clock--lg::before {width: 6px; height: 28px; margin-left: -3px; margin-top: -28px;}
-.clock--lg::after {width: 24px; height: 6px; margin-top: -3px;}
+.clock--lg::before { width: 0.375rem; height: 1.75rem; margin-left: -0.1875rem; margin-top: -1.75rem; }
+.clock--lg::after  { width: 1.5rem;   height: 0.375rem; margin-top: -0.1875rem; margin-left: -0.75rem; }

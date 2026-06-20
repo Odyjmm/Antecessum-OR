@@ -1,22 +1,99 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+/* ==========================================================================
+   GLOBAL — reset, design tokens e base tipográfica
+   Carregado primeiro em todas as páginas. Tudo aqui é compartilhado.
+   ========================================================================== */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+/* --------------------------------------------------------------------------
+   DESIGN TOKENS
+   Toda cor, raio e espaçamento reutilizado no projeto vive aqui.
+   Para mudar a identidade visual inteira, mude só este bloco.
+   -------------------------------------------------------------------------- */
 :root {
-    --clock-color: #336633;
-    --subtitle-color: #1d5f1d;
+  /* Marca — verde */
+  --color-primary: #165f12;        /* verde principal: botões, badges, headers, cards de destaque */
+  --color-primary-dark: #0d4f0d;   /* verde escuro: fundo do palco (.screen) */
+  --color-primary-light: #2b6a28;  /* verde claro: bordas de card, acentos secundários */
+  --color-text-muted: #335f2d;     /* verde acinzentado: horários, legendas, texto secundário */
+  --color-tint: #c9dbc5;           /* verde pálido: fundos suaves (avisos, selects) */
+  --color-accent: #40c4ff;         /* azul do logo — único tom fora da paleta verde */
+
+  /* Neutros */
+  --color-ink: #1a1a1a;            /* texto principal escuro */
+  --color-surface: #ffffff;        /* branco — cards, painéis internos */
+  --color-surface-soft: #f5f5f5;   /* cinza muito claro — fundo do painel, áreas soltas */
+  --color-surface-faint: #fafafa;  /* cinza quase branco — caixas de texto, inputs neutros */
+  --color-border-soft: #c0c0c0;    /* cinza médio — bordas inativas, placeholders, contadores */
+  --color-icon-muted: #888888;     /* cinza — ícones neutros (ex: navbar inativa) */
+  --color-text-on-light: #555555;  /* texto secundário sobre fundo claro */
+
+  /* Gráficos (graficos.html) — paleta de dados, intencionalmente fora do verde de marca */
+  --chart-line: var(--color-primary);
+  --chart-accent-1: #83d992;
+  --chart-accent-2: #2aff00;
+  --chart-accent-3: #000000;
+  --chart-bg: #556b8a;
+
+  /* Raios */
+  --radius-sm: 0.75rem;
+  --radius-md: 1.125rem;
+  --radius-lg: 1.375rem;
+  --radius-xl: 2.1875rem;
+  --radius-pill: 999px;
+
+  /* Sombra padrão de elevação */
+  --shadow-panel: 0 0.625rem 1.875rem rgba(0, 0, 0, 0.15);
+  --shadow-card: 0 0.375rem 1.25rem rgba(0, 0, 0, 0.15);
+
+  /* Larguras de conteúdo — usadas pelo .panel e formulários centrados */
+  --content-max-width: 87.5rem; /* 1400px: teto para telas muito largas (TV 4K) */
+  --form-max-width: 27rem;      /* 432px: teto para formulários, nunca "esticam" em telas grandes */
 }
 
-body{
-    min-height:100vh;
+/* --------------------------------------------------------------------------
+   TIPOGRAFIA FLUIDA
+   1rem cresce suavemente do mobile até a TV. Como o projeto inteiro usa
+   rem (não px) para fontes e a maioria dos espaçamentos/dimensões de
+   componente, tudo escala junto automaticamente — sem precisar duplicar
+   regras por breakpoint para cada elemento.
+   -------------------------------------------------------------------------- */
+html {
+  /* 16px no celular (390px) → ~26px em TV (1920px+) */
+  font-size: clamp(16px, 0.95vw + 10px, 26px);
+}
 
-    display:flex;
-    justify-content:center;
-    align-items:center;
+body {
+  min-height: 100vh;
 
-    background:#0d4f0d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    font-family:Arial, Helvetica, sans-serif;
+  background: var(--color-primary-dark);
+
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--color-ink);
+}
+
+/* Acessibilidade: foco visível consistente em qualquer elemento interativo */
+a:focus-visible,
+button:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* Respeita preferência de movimento reduzido do usuário */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
 }

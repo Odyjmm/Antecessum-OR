@@ -1,228 +1,255 @@
+/* GRÁFICOS / DASHBOARD — específico desta página */
+
 .top {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
 }
 
 .center-title {
-    flex: 1;
-    margin: 0 10px;
+  flex: 1;
+  min-width: 10rem;
+  margin: 0 0.625rem;
 }
 
 .main-btn {
-    background: #1b5f16;
-    color: white;
-    border-radius: 18px;
-    padding: 10px;
-    text-align: center;
-    font-size: 20px;
-    font-weight: bold;
+  background: var(--color-primary);
+  color: var(--color-surface);
+  border-radius: var(--radius-md);
+  padding: 0.625rem;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: bold;
 }
 
 .right-buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .right-btn {
-    background: #1b5f16;
-    color: white;
-    border-radius: 16px;
-    padding: 10px 18px;
-    text-align: center;
-    font-weight: bold;
-    min-width: 120px;
+  background: var(--color-primary);
+  color: var(--color-surface);
+  border-radius: 1rem;
+  padding: 0.625rem 1.125rem;
+  text-align: center;
+  font-weight: bold;
+  min-width: 7.5rem;
+  font-size: 0.9375rem;
 }
 
 .card-row {
-    display: flex;
-    gap: 15px;
-    margin-bottom: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9375rem;
+  margin-bottom: 0.9375rem;
 }
 
 .card {
-    background: white;
-    border: 2px solid #2b6a28;
-    border-radius: 20px;
-    padding: 15px;
-    position: relative;
-    overflow: hidden;
-    flex: 1;
+  background: var(--color-surface);
+  border: 0.125rem solid var(--color-primary-light);
+  border-radius: 1.25rem;
+  padding: 0.9375rem;
+  position: relative;
+  overflow: hidden;
+  flex: 1;
+  min-width: 11rem;
 }
 
 .card-title {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: #1b5f16;
-    color: white;
-    padding: 10px 16px;
-    border-bottom-right-radius: 18px;
-    font-weight: bold;
-    font-size: 16px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: var(--color-primary);
+  color: var(--color-surface);
+  padding: 0.625rem 1rem;
+  border-bottom-right-radius: var(--radius-md);
+  font-weight: bold;
+  font-size: 1rem;
 }
 
 .metric {
-    margin-top: 60px;
-    text-align: center;
+  margin-top: 3.75rem;
+  text-align: center;
 }
 
 .metric h1 {
-    font-size: 52px;
-    color: white;
-    -webkit-text-stroke: 2px #1b5f16;
+  font-size: 3.25rem;
+  color: var(--color-surface);
+  -webkit-text-stroke: 0.125rem var(--color-primary);
 }
 
 .metric p {
-    font-size: 18px;
-    font-weight: bold;
-    margin-top: 5px;
+  font-size: 1.125rem;
+  font-weight: bold;
+  margin-top: 0.3125rem;
 }
 
 .small-graph {
-    margin-top: 20px;
-    height: 60px;
-    position: relative;
+  margin-top: 1.25rem;
+  height: 3.75rem;
+  position: relative;
 }
 
 .small-graph svg {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .large-card {
-    background: white;
-    border: 2px solid #2b6a28;
-    border-radius: 20px;
-    padding: 20px;
-    margin-bottom: 15px;
-    position: relative;
+  background: var(--color-surface);
+  border: 0.125rem solid var(--color-primary-light);
+  border-radius: 1.25rem;
+  padding: 1.25rem;
+  margin-bottom: 0.9375rem;
+  position: relative;
 }
 
 .large-card .card-title {
-    font-size: 15px;
+  font-size: 0.9375rem;
 }
 
 .delay {
-    margin-top: 60px;
-    text-align: left;
+  margin-top: 3.75rem;
+  text-align: left;
 }
 
 .delay h1 {
-    font-size: 60px;
-    color: white;
-    -webkit-text-stroke: 2px #1b5f16;
+  font-size: 3.75rem;
+  color: var(--color-surface);
+  -webkit-text-stroke: 0.125rem var(--color-primary);
 }
 
 .delay p {
-    font-size: 18px;
-    font-weight: bold;
+  font-size: 1.125rem;
+  font-weight: bold;
 }
 
 .line-chart {
-    margin-top: 20px;
+  margin-top: 1.25rem;
 }
 
 .line-chart svg {
-    width: 100%;
-    height: 100px;
+  width: 100%;
+  height: 6.25rem;
 }
 
 .chart-container {
-    margin-bottom: 15px;
+  margin-bottom: 0.9375rem;
 }
 
 .chart-title {
-    background: #1b5f16;
-    color: white;
-    display: inline-block;
-    padding: 10px 16px;
-    border-radius: 15px 15px 0 0;
-    font-weight: bold;
-    margin-left: 5px;
+  background: var(--color-primary);
+  color: var(--color-surface);
+  display: inline-block;
+  padding: 0.625rem 1rem;
+  border-radius: 0.9375rem 0.9375rem 0 0;
+  font-weight: bold;
+  margin-left: 0.3125rem;
 }
 
 .big-chart {
-    background: #556b8a;
-    height: 240px;
-    border-radius: 0 0 15px 15px;
-    padding: 20px;
-    position: relative;
+  background: var(--chart-bg);
+  height: 15rem;
+  border-radius: 0 0 0.9375rem 0.9375rem;
+  padding: 1.25rem;
+  position: relative;
 }
 
 .big-chart svg {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .bottom-card {
-    background: white;
-    border: 2px solid #2b6a28;
-    border-radius: 20px;
-    padding: 20px;
+  background: var(--color-surface);
+  border: 0.125rem solid var(--color-primary-light);
+  border-radius: 1.25rem;
+  padding: 1.25rem;
 }
 
 .bottom-card .card-title {
-    position: relative;
-    display: inline-block;
-    border-radius: 15px;
-    margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+  border-radius: 0.9375rem;
+  margin-bottom: 1.25rem;
 }
 
 .bottom-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
 }
 
 .donut {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    background:
-        conic-gradient(#1b5f16 0% 40%,
-            #83d992 40% 60%,
-            #000000 60% 85%,
-            #2aff00 85% 100%);
-    position: relative;
+  width: 9.375rem;
+  height: 9.375rem;
+  border-radius: 50%;
+  background: conic-gradient(
+    var(--color-primary) 0% 40%,
+    var(--chart-accent-1) 40% 60%,
+    var(--chart-accent-3) 60% 85%,
+    var(--chart-accent-2) 85% 100%
+  );
+  position: relative;
+  flex-shrink: 0;
 }
 
 .donut::after {
-    content: '';
-    width: 70px;
-    height: 70px;
-    background: #edf0ed;
-    border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  content: "";
+  width: 4.375rem;
+  height: 4.375rem;
+  background: var(--color-surface-soft);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .legend {
-    flex: 1;
+  flex: 1;
+  min-width: 12rem;
 }
 
 .legend-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 14px;
-    font-weight: bold;
-    color: #294d28;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.875rem;
+  font-weight: bold;
+  color: var(--color-text-muted);
 }
 
 .legend-left {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
 }
 
 .dot {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* Em telas estreitas, dois cards lado a lado ficam apertados demais */
+@media (max-width: 420px) {
+  .card-row {
+    flex-direction: column;
+  }
+}
+
+/* Em desktop/TV, dá para abrir mais espaço entre os cards e levantar
+   um pouco o tamanho-base do gráfico grande sem reescrever a estrutura */
+@media (min-width: 1024px) {
+  .card-row { gap: 1.5rem; }
+  .big-chart { height: 18rem; }
 }

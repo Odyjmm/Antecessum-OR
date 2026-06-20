@@ -1,4 +1,20 @@
 document.addEventListener('DOMContentLoaded', () => {
+  // Quando a página foi aberta a partir de uma sala específica
+  // (?from=salaN, vindo de um detalhes_salaN.html), o link de "voltar"
+  // passa a apontar para essa mesma sala em vez do padrão fixo. Sem
+  // isso, cancelar ou registrar observação a partir de qualquer sala
+  // que não a 1 te devolveria sempre para a Sala 1.
+  const params = new URLSearchParams(window.location.search);
+  const from = params.get('from');
+  const validRooms = ['sala1', 'sala2', 'sala3', 'sala4', 'sala5'];
+
+  if (from && validRooms.includes(from)) {
+    const backLink = document.querySelector('.back');
+    if (backLink) {
+      backLink.setAttribute('href', `detalhes_${from}.html`);
+    }
+  }
+
   document.querySelectorAll('.radio-item').forEach(item => {
     item.addEventListener('click', () => {
       document.querySelectorAll('.radio-circle').forEach(c => c.classList.remove('selected'));

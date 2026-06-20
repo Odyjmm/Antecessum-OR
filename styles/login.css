@@ -1,135 +1,141 @@
+/* LOGIN — específico desta página */
+
 .form {
-    width: 85%;
-    display: flex;
-    flex-direction: column;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .input-box {
-    width: 100%;
-    height: 95px;
-    background: white;
-    border-radius: 28px;
-    display: flex;
-    align-items: center;
-    padding: 0 28px;
-    margin-bottom: 40px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  height: 5.9375rem;
+  background: var(--color-surface);
+  border-radius: 1.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0 1.75rem;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 0.375rem 1.25rem rgba(0, 0, 0, 0.15);
 }
 
 .input-box input {
-    border: none;
-    outline: none;
-    width: 100%;
-    font-size: 22px;
-    color: #777;
-    margin-left: 18px;
-    font-weight: 600;
+  border: none;
+  outline: none;
+  flex: 1;
+  min-width: 0;
+  font-size: 1.375rem;
+  color: var(--color-text-on-light);
+  font-weight: 600;
+  background: transparent;
+  font-family: inherit;
 }
 
 .input-icon {
-    font-size: 34px;
-    color: #bdbdbd;
+  font-size: 2.125rem;
+  color: var(--color-border-soft);
+  line-height: 1;
 }
 
 .eye {
-    margin-left: auto;
-    font-size: 30px;
-    color: #bdbdbd;
-    cursor: pointer;
+  margin-left: auto;
+  font-size: 1.875rem;
+  color: var(--color-border-soft);
+  cursor: pointer;
+  line-height: 1;
 }
 
 .forgot {
-    width: 100%;
-    text-align: right;
-    color: white;
-    font-size: 24px;
-    font-weight: 700;
-    margin-top: -18px;
-    margin-bottom: 90px;
-    padding-right: 10px;
-    cursor: pointer;
+  width: 100%;
+  text-align: right;
+  color: var(--color-surface);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: -1.125rem;
+  margin-bottom: 5.625rem;
+  padding-right: 0.625rem;
+  cursor: pointer;
 }
 
-.login-btn{
-  width:100%;
-  height:70px;
+.login-btn {
+  width: 100%;
+  height: 4.375rem;
 
-  background:white;
-  color:#165f12;
+  background: var(--color-surface);
+  color: var(--color-primary);
 
-  border:none;
-  border-radius:20px;
+  border: none;
+  border-radius: var(--radius-md);
 
-  font-size:24px;
-  font-weight:800;
+  font-size: 1.5rem;
+  font-weight: 800;
 
+  cursor: pointer;
+  text-decoration: none;
 
-  cursor:pointer;
-
-  text-decoration:none;
-
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  transition: 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s;
 }
 
 .login-btn:hover {
-    transform: scale(1.02);
+  transform: scale(1.02);
 }
 
 .divider {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 50px 0;
-    gap: 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 3.125rem 0;
+  gap: 1.25rem;
 }
 
 .divider-line {
-    flex: 1;
-    height: 2px;
-    background: rgba(255, 255, 255, 0.6);
+  flex: 1;
+  height: 0.125rem;
+  background: rgba(255, 255, 255, 0.6);
 }
 
 .divider span {
-    color: #d0d0d0;
-    font-size: 24px;
-    font-weight: 700;
+  color: var(--color-border-soft);
+  font-size: 1.5rem;
+  font-weight: 700;
 }
 
 .bio-btn {
-    width: 100%;
-    height: 95px;
-    border: none;
-    border-radius: 35px;
-    background: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 22px;
-    color: #0c5b12;
-    font-size: 28px;
-    font-weight: 800;
-    cursor: pointer;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    transition: 0.3s;
+  width: 100%;
+  height: 5.9375rem;
+  border: none;
+  border-radius: var(--radius-xl);
+  background: var(--color-surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.375rem;
+  color: var(--color-primary);
+  font-size: 1.75rem;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.2);
+  transition: 0.2s;
 }
 
 .bio-btn:hover {
-    transform: scale(1.02);
+  transform: scale(1.02);
 }
 
 .finger {
-    font-size: 45px;
-    color: #333;
+  font-size: 2.8125rem;
+  color: var(--color-ink);
+  line-height: 1;
 }
 
 .footer {
-    margin-top: 25px;
-    color: white;
-    font-size: 34px;
-    font-weight: 800;
-    text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.45);
+  margin-top: 1.5625rem;
+  color: var(--color-surface);
+  font-size: 2.125rem;
+  font-weight: 800;
+  text-shadow: 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.45);
 }
